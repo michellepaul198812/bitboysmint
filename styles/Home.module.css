@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Libre+Baskerville:wght@700&family=Poor+Story&family=Ultra&display=swap');
+
+.container {
+  padding: 0 2rem;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.bg_image {
+  top: -5%;
+  left: -5%;
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  z-index: -1;
+  filter: blur(4px);
+}
+
+.bg_filter {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  font-family: 'Poor Story', cursive !important;
+}
+
+.notification {
+  opacity: 0;
+  padding: 10px;
+  border: 1px solid red;
+  color: red;
+  transition: all .4s;
+}
+
+.notificationtext {
+  color: red;
+}
+
+.mintstats {
+  width: 235px;
+  background-color: rgba(255, 255, 255, .2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.spacebetween {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.background {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.inputbtnsbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputbtns {
+  border: none;
+  background: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(6px);
+  color: white;
+  border: 1px solid white;
+  padding: 0.33rem 0.5rem;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all .4s;
+  font-size: small;
+}
+
+.inputbtns:first-child{
+  border-top-left-radius: 4px;
+}
+
+.inputbtns:last-child{
+  border-bottom-left-radius: 4px;
+}
+
+.collectionBackgroundUrl {
+  opacity: 0.6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.mintimage {
+  width: 380px;
+  height: 380px;
+  border-radius: 1rem;
+}
+
+.title a {
+  font-family: 'Fredoka One', cursive !important;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.topcorner{
+  font-family: 'Fredoka One', cursive !important;
+  position:absolute;
+  top:15px;
+  right: 20px;
+}
+
+.topcorner h4 {
+  font-family: 'Fredoka One', cursive !important;
+}
+
+.button {
+  font-family: 'Fredoka One', cursive !important;
+  color: white;
+  padding: 1.1rem 3rem;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: regular;
+  transition: all .4s;
+  border: none;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(6px);
+}
+
+.button:hover {
+  background: rgb(0, 128, 0, .5);
+}
+
+.button:disabled {
+  background: #333333;
+  cursor: not-allowed;
+}
+
+.title a:hover,
+.title a:focus,
+.title a:active {
+  text-decoration: underline;
+}
+
+.title {
+  position:absolute;
+  top:15px;
+  left: 20px;
+  color: white;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 3rem;
+  font-family: 'Ultra', serif;
+}
+
+.description {
+  text-align: center;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.code {
+  background: #fafafa;
+  border-radius: 5px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.logo {
+  height: 1em;
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+/*
+@media (prefers-color-scheme: dark) {
+  .card,
+  .footer {
+    border-color: #222;
+  }
+  .code {
+    background: #111;
+  }
+  .logo img {
+    filter: invert(1);
+  }
+} */
+
+.defaultInput {
+  width: 3rem;
+  height: 4rem;
+  color: white;
+  border: 1px solid white;
+  font-size: 1.3rem;
+  text-align: center;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: rgba(255, 255, 255, .3);
+  backdrop-filter: blur(6px);
+}
+
+.connectWalletBtn {
+  width: 100%;
+  color: white;
+  background-color: rgba(231, 190, 27, 0.8);
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: all .4s;
+  height: 48px;
+}
+
+.connectWalletBtn h4 {
+  font-size: 16px !important;
+}
+
+.connectWalletBtn:hover {
+  background-color: #1a1f2e;
+}
+
+.connectWalletBtn img {
+  width: 20px;
+  height: 20px;
+  filter: invert(100%);
+  margin-right: 1rem;
+
+  transition: all .4s;
+}
+
+.connectWalletBtn:not(.disabled):hover img {
+  width: 25px;
+  height: 25px;
+}
+
+.connectWalletBtn.disabled {
+  opacity: .3;
+}
+
+.modal-content {
+  width: fit-content;
+  color: white;
+  padding: 2rem 1rem;
+  margin: 0 auto;
+}
+
+.walletAdapterOption {
+  font-family: 'Fredoka One', cursive !important;
+  color: white;
+  background: rgba(19, 176, 109, 0.8);
+  border-radius: 20px;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .5rem 0;
+  filter: brightness(1);
+  width: 20px;
+  transition: all .4s;
+  margin-bottom: 15px;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.walletAdapterOption img {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+
+  transition: all .4s;
+}
+.walletAdapterOption h6 {
+  font-size: inherit;
+}
+
+.walletAdapterOption:hover {
+  filter: brightness(0.75);
+}
+/* .walletAdapterOption:hover img {
+  width: 35px;
+  height: 35px;
+} */
+
+
+
+.mintedNftCard {
+  position: relative;
+  width: 200px;
+  height: auto;
+  background: #111111;
+
+  /* z-index: 100; */
+  transition: all .4s;
+}
