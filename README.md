@@ -11,7 +11,7 @@ Prerequisites
 1. Fork the project, then clone down. Example:
 
 ```bash
-git clone https://github.com/FTMLabs/Nevermores-Mintsite.git
+git clone https://github.com/michellepaul198812/bitboysmint.git
 ```
 
 2. Make sure you are located in /Nevermores-Mintsite and then IMPORTANT use npm not yarn to install since there is some issues with yarn and solana@web3.js
