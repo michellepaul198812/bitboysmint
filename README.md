@@ -1,55 +1,84 @@
-## FTM Official Mintsite
+# bitboysmint
 
-## Getting Set Up
+## Project Description
 
-Prerequisites
+**bitboysmint** is a decentralized minting platform built on the Aptos blockchain. It enables users to mint unique Bitboys NFTs through a transparent and secure process using Move smart contracts. The project is designed to offer fair, auditable, and community-driven NFT drops.
 
-- Ensure you have recent versions of both node and yarn installed.
+## Features
+
+- 🎨 Mint unique Bitboys NFTs on-chain
+- ⚡ Fast and gas-optimized minting on Aptos
+- 🔒 Secure smart contract handling for mint lifecycle
+- 🧩 Configurable parameters like mint price, supply cap, and whitelist
+- 🛠️ Easy integration with Aptos wallets and marketplace platforms
 
 ## Installation
 
-1. Fork the project, then clone down. Example:
-
-```bash
+\`\`\`bash
+# Clone the repository
 git clone https://github.com/michellepaul198812/bitboysmint.git
-```
+cd bitboysmint
 
-2. Make sure you are located in /Nevermores-Mintsite and then IMPORTANT use npm not yarn to install since there is some issues with yarn and solana@web3.js
-
-```bash
+# Install frontend dependencies (if applicable)
 npm install
-```
+# or
+yarn install
+\`\`\`
+
+## Usage
+
+### Deploy Smart Contracts
+
+\`\`\`bash
+# Compile Move contracts
+aptos move compile --package-dir move/
+
+# Publish the contracts to Aptos network
+aptos move publish --package-dir move/ --profile default
+\`\`\`
+
+### Mint NFTs (Example)
+
+\`\`\`bash
+# Execute mint transaction via CLI
+aptos move run-entry-function \
+  --function-id "bitboysmint::minter::mint" \
+  --args "0xYourReceiverAddress"
+\`\`\`
+
+Or integrate minting logic into a frontend DApp using Aptos SDKs.
+
+### Testing
+
+\`\`\`bash
+# Run Move unit tests
+aptos move test --package-dir move/
+\`\`\`
 
 ## Configuration
 
-Make sure that candyMachineInfo.js is configured correctly (see below for path to the file)
+- Modify mint price, total supply, whitelist settings, or reveal mechanics directly in the Move modules before deployment.
+- Update `aptos.yaml` profiles to deploy to devnet, testnet, or mainnet as needed.
 
-```bash
-/Nevermores-Mintsite/helpers/candyMachineInfo.js
-```
+## Contributing
 
-## Run the Mintsite
+We welcome contributions from the community!
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/your-feature-name`)
+3. Make your changes
+4. Commit your changes (`git commit -m 'Add your message here'`)
+5. Push to your branch (`git push origin feature/your-feature-name`)
+6. Create a pull request
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is licensed under the [Apache 2.0 License](LICENSE).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Links
 
-## Help
-
-[Discord](https://discord.gg/DUaQvT7AsZ)
-
-## Creators
-
-[@FTMLabs](https://github.com/FTMLabs)
-[@SolanaJax](https://github.com/SolanaJax)
-[@Zverizsume](https://github.com/Zverizsume)
+- [Aptos Documentation](https://aptos.dev/)
+- [Move Language Documentation](https://move-language.github.io/move/)
+- [Aptos GitHub](https://github.com/aptos-labs)
